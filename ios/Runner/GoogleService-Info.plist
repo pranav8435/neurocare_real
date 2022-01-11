@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>290338522467-46f4o5lt51g16bp1110t09god26lnj1k.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.290338522467-46f4o5lt51g16bp1110t09god26lnj1k</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB-PicyDlJu_TkC_xDd7OJ79y8PASDaZvY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>290338522467</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>health.ai</string>
+	<key>PROJECT_ID</key>
+	<string>neurocaretest-b825c</string>
+	<key>STORAGE_BUCKET</key>
+	<string>neurocaretest-b825c.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:290338522467:ios:b8364c81d1037e21243f56</string>
+</dict>
+</plist>
