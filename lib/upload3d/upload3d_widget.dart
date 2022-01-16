@@ -430,7 +430,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   Future<void> makePostRequest() async {
-    final url = Uri.parse('http://a6bc-209-169-75-126.ngrok.io/setup_AR');
+    final url = Uri.parse('http://961c-209-169-75-126.ngrok.io/setup_AR');
     final headers = {"Content-type": "application/json"};
     final json = jsonEncode(availableHobbies);
     final response = await post(url, headers: headers, body: json);
@@ -440,14 +440,14 @@ class _HomePageState extends State<HomePage> {
 
   // Generate a list of available hobbies here
   List<Map> availableHobbies = [
-    {"name": "Foobball", "isChecked": false},
-    {"name": "Baseball", "isChecked": false},
+    {"name": "Washing Machine", "isChecked": false},
+    {"name": "Dishwasher", "isChecked": false},
     {
-      "name": "Video Games",
+      "name": "Tea Kettle",
       "isChecked": false,
     },
-    {"name": "Readding Books", "isChecked": false},
-    {"name": "Surfling The Internet", "isChecked": false}
+    {"name": "Making the Bed", "isChecked": false},
+    {"name": "Set the table", "isChecked": false}
   ];
 
   @override
@@ -458,7 +458,10 @@ class _HomePageState extends State<HomePage> {
         minimumSize: Size.fromHeight(50),
         shape: StadiumBorder(side: BorderSide(width: 2)));
     return Scaffold(
+      backgroundColor: Color(0xff1a1f24),
       appBar: AppBar(
+        backgroundColor: Color(0xff372bb7),
+        centerTitle: true,
         title: Text('Setup NeuroCare AR'),
       ),
       body: SingleChildScrollView(
@@ -466,10 +469,8 @@ class _HomePageState extends State<HomePage> {
           padding: EdgeInsets.all(20),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text(
-              'Choose your hobbies:',
-              style: TextStyle(fontSize: 24),
-            ),
+            Text('Select Needed Assistance:',
+                style: TextStyle(fontSize: 24, color: Colors.white)),
             SizedBox(height: 10),
             Divider(),
             SizedBox(height: 10),
@@ -479,16 +480,22 @@ class _HomePageState extends State<HomePage> {
                 children: availableHobbies.map((hobby) {
               return CheckboxListTile(
                   value: hobby["isChecked"],
-                  title: Text(hobby["name"]),
+                  activeColor: Color(0xff372bb7),
+                  title: Text(hobby["name"],
+                      style: TextStyle(color: Colors.white)),
                   onChanged: (newValue) {
                     setState(() {
                       hobby["isChecked"] = newValue;
                     });
                   });
             }).toList()),
-            ElevatedButton(
-              onPressed: makePostRequest,
-              child: Text('POST'),
+            SizedBox(height: 90),
+            Center(
+              child: ElevatedButton(
+                style: style,
+                onPressed: makePostRequest,
+                child: Text('Request QR Codes'),
+              ),
             ),
             // Display the result here
             SizedBox(height: 10),
@@ -500,7 +507,7 @@ class _HomePageState extends State<HomePage> {
                   print(availableHobbies);
                   return Card(
                     elevation: 3,
-                    color: Colors.amber,
+                    color: Colors.deepPurple,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(hobby["name"]),

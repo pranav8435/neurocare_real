@@ -61,7 +61,9 @@ class _MyAppState extends State<MyApp> {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: const [Locale('en', '')],
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+          unselectedWidgetColor: Color(0xff372bb7),
+          primarySwatch: Colors.purple),
       home: initialUser == null || displaySplashImage
           ? Container(
               color: Colors.transparent,
